@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event riminder</title>
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
+  </head>
+  <body>
+    <div class="containers animate__slideInDown animate__animated">
+      <div class="box">
+        <div class="navBar">
+          <h1>event riminder</h1>
+          <button id="logoutBtn">Logout</button>
+        </div>
+        <!-- Header Start -->
+        <header>
+          <div id="newTask" onclick="newTask()">
+            <p>New Task <i class="fa-solid fa-plus"></i></p>
+          </div>
+          <div id="clock">
+            <p id="time"></p>
+            <p id="date"></p>
+          </div>
+          <div id="namazR" onclick="namazR()">
+            <p><i class="fa-solid fa-mosque"></i>event Time</p>
+          </div>
+        </header>
+        <!-- Main Section Start -->
+        <main class="hide animate__animated animate__fadeInDown">
+          <div id="userinput">
+            <div class="userfield">
+              <label for="userTitle">Title:</label>
+              <input type="text" id="userTitle" placeholder="Add Title..." />
+            </div>
+            <div class="userfield">
+              <label for="userDis">Discerption:</label>
+              <input
+                type="text"
+                id="userDis"
+                placeholder="Add Discerption..."
+              />
+            </div>
+            <div class="userfield">
+              <label for="setTime">Set Time</label>
+              <input type="time" id="setTime" />
+            </div>
+            <div class="userfield">
+              <label for="setDates">Set Date</label>
+              <input type="date" id="setDate" />
+            </div>
+            <div id="userinput">
+              <button id="btn" onclick="saveData()">Add Data</button>
+            </div>
+          </div>
+        </main>
+        <!-- User Value Section Start -->
+        <section id="section">
+          <div id="hideinnher">
+            <div
+              class="sectionBox hidden animate__animated animate__fadeInLeft"
+            >
+              <div class="secDisply">
+                <div class="alarm">
+                  <p>Time: <span id="alramSet">12:00</span></p>
+                  <span>|</span>
+                  <p>Date: <span id="dateSet">once</span></p>
+                </div>
+                <div class="reminderValue">
+                  <p id="titles">Test Alarm Title</p>
+                  <p id="discerption">Test Alarm Discerption</p>
+                  <div class="task-actions">
+                    <button onclick="editTask('taskId')" class="edit-btn">Edit</button>
+                    <button onclick="deleteTask('taskId')" class="delete-btn">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Namaz reminder -->
+          <div class="namaz animate__animated animate__fadeInRight">
+            <div class="namazHeading">
+              <div class="nestedDiv">
+                <p></p>
+                <p>Time: <span>05:31am</span></p>
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="namazHeading">
+              <div class="nestedDiv">
+                <p></p>
+                <p>Time: <span>12:17pm</span></p>
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="namazHeading">
+              <div class="nestedDiv">
+                <p></p>
+                <p>Time: <span>04:08pm</span></p>
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="namazHeading">
+              <div class="nestedDiv">
+                <p></p>
+                <p>Time: <span>05:44pm</span></p>
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="namazHeading">
+              <div class="nestedDiv">
+                <p></p>
+                <p>Time: <span>07:03pm</span></p>
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Powered by Ahmedraza https://ahmedrazabaloch.netlify.app -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
