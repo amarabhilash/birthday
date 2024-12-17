@@ -1,0 +1,62 @@
+@media only screen and (max-width: 425px) {
+  .box {
+    padding: unset;
+  }
+  .box header {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .namaz {
+    width: unset;
+  }
+  .namazHeading {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+  div#clock,
+  div#newTask,
+  div#namazR {
+    font-size: 1;
+    width: 100%;
+  }
+  .nestedDiv {
+    align-items: center;
+  }
+  #userinput {
+    gap: 10px;
+  }
+  .userfield,
+  .userfield input,
+  .containers,
+  #userinput,
+  .sectionBox,
+  #btn,
+  div#hideinnher {
+    width: 100%;
+  }
+  .userfield label {
+    width: 40%;
+  }
+  #section,
+  div#hideinnher {
+    flex-direction: column-reverse;
+  }
+  .alarm {
+    font-size: 0.9;
+  }
+  p#titles {
+    font-size: 1.2em;
+  }
+  .sectionBox {
+    height: auto;
+  }
+  .navBar {
+    padding: 10px;
+  }
+  .navBar h1 {
+    font-size: 1.5em;
+  }
+  #logoutBtn {
+    margin-left: unset;
+  }
+}
