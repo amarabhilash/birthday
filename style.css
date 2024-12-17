@@ -1,0 +1,372 @@
+@font-face {
+  font-family: "clockicons";
+  src: url("https://db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot");
+  src: url("https://db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.svg#clockicons")
+      format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primaryColor) !important;
+}
+:root {
+  --primaryColor: #ff6565/F5F5DC;
+  --secondaryColor: #666666ed;
+}
+.bg-indigo-600 {
+  background-color: var(--primaryColor) !important;
+}
+.text-indigo-600,
+.text-gray-900 {
+  color: var(--primaryColor) !important;
+}
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.mt-2 {
+  margin-top: 0 !important;
+}
+.ring-gray-300 {
+  --tw-ring-color: rgb(255 101 101) !important;
+  outline: var(--primaryColor);
+  color: #000 !important;
+  padding-left: 10px !important;
+}
+
+/* Main page */
+
+.containers {
+  width: 1340px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--primaryColor);
+}
+.box {
+  padding: 20px 50px;
+  height: 100%;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  width: 65%;
+  margin-inline: auto;
+}
+.navBar h1 {
+  color: var(--secondaryColor);
+  font-size: 2em;
+  font-weight: 600;
+  border-bottom: 10px double var(--secondaryColor);
+  user-select: none;
+}
+#logoutBtn {
+  background: var(--secondaryColor);
+  color: #f6f6f6;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: ;
+  transition: all 0.3s linear;
+}
+
+#logoutBtn:hover {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  border: 1px solid var(--secondaryColor);
+}
+
+/* Header Section */
+.box header,
+main,
+section {
+  padding: 10px;
+}
+.box header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-wrap: wrap;
+  width: 65%;
+  margin: auto;
+}
+div#clock,
+div#newTask,
+div#namazR {
+  color: var(--secondaryColor);
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 30%;
+  user-select: none;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+}
+#time {
+  font-family: "clockicons";
+  font-size: 2em;
+  line-height: 60px;
+  font-weight: 400;
+}
+#date {
+  font-size: 1em;
+}
+div#newTask:hover,
+div#namazR:hover,
+.namazHeading:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#newTask p,
+#namazR p {
+  padding: 20px 0;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+}
+.fa-solid,
+.fas {
+  font-weight: 900;
+  margin: 0 15px;
+}
+/* Main Section User Input */
+.box main {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+.hide,
+.namaz {
+  display: none;
+}
+#userinput {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-weight: 600;
+  user-select: none;
+  transition: all 0.3s linear;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#inputField {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+}
+#btn {
+  font-size: 1em;
+  border: 1px solid;
+  padding: 10.8px;
+  transition: all 0.3s linear;
+}
+#btn:hover {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+.userfield {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.userfield input {
+  padding: 10px;
+  font-size: 17px;
+  outline: 1px solid var(--primaryColor);
+}
+.userfield label {
+  padding: 10.8px 10px;
+  text-align: center;
+  border: 1px solid var(--primaryColor);
+  cursor: pointer;
+  transition: all 0.3s linear;
+  background-color: var(--primaryColor);
+  color:#fff;
+}
+.userfield input::placeholder {
+  color: #ff9d98;
+}
+.userfield input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+#setTime,
+#setDate {
+  padding: 9px;
+}
+/* <!-- User Value Section Start --> */
+#section {
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.secDisply {
+  color: var(--secondaryColor);
+  font-size: 1.3em;
+}
+.sectionBox {
+  width: 32%;
+  overflow: hidden;
+  max-height: 300px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+}
+.alarm {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
+}
+p#titles {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px;
+  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+}
+p#discerption {
+  text-align: justify;
+  padding: 10px;
+  color: var(--primaryColor);
+  background-color: var(--secondaryColor);
+}
+.namaz {
+  width: 80%;
+  margin: 0 auto;
+  user-select: none;
+}
+.namaz > div > p,
+.switch {
+  width: 30%;
+}
+.namazHeading {
+  display: flex;
+  margin: 20px auto;
+  width: 65%;
+  padding: 20px 30px;
+  font-size: 1.5em;
+  align-items: center;
+  color: #000;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+.nestedDiv {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+.nestedDiv p {
+  width: 50%;
+}
+div#hideinnher {
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+/* toggle button */
+.switch {
+  --secondary-container: #f6f6f6;
+  --primary: #1ceb26;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
+}
+
+.switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313033;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: var(--primaryColor);
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  background-color: var(--primary);
+}
+
+input:checked + .slider {
+  background-color: var(--secondary-container);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-container);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.9em);
+}
+/* SweetAlert  */
+div:where(.swal2-container) div:where(.swal2-popup) {
+  color: var(--primaryColor) !important;
+  width: unset !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  background-color: var(--primaryColor) !important;
+}
+
+.swal2-timer-progress-bar {
+  background-color: var(--primaryColor) !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+  font-size: 0.8rem !important;
+}
+div:where(.swal2-container) h2:where(.swal2-title) {
+  padding: unset !important;
+  padding: 20px !important;
+}
+div:where(.swal2-container).swal2-center > .swal2-popup {
+  padding: 20px !important;
+}
