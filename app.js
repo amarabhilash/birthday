@@ -137,7 +137,7 @@ function saveData() {
     title: userTitles.value.trim(),
     description: userDiscerption.value.trim(),
     time: formattedTime,
-    date: inputDate.value.trim() || "Once", // Default changed to Once
+    date: inputDate.value.trim() || "Every-Day",
   };
   newTasks.push(newTask); // Add to newTasks array
 
@@ -175,4 +175,49 @@ function saveData() {
       }
     });
   }, 1000);
+}
+
+// Edit a task in newTasks array
+function editTask(taskId) {
+  const task = newTasks.find((task) => task.id === taskId);
+  if (!task) return;
+
+  userTitles.value = task.title;
+  userDiscerption.value = task.description;
+  inputTime.value = moment(task.time, "h:mm:ss A").format("HH:mm:ss");
+  inputDate.value = task.date !== "Every-Day" ? task.date : "";
+
+  deleteTask(taskId); // Remove the task so updated version is added
+}
+
+// Delete a task from newTasks array
+function deleteTask(taskId) {
+  newTasks = newTasks.filter((task) => task.id !== taskId); // Remove task
+  renderTasks(); // Update task list
+}
+
+// Render tasks dynamically
+function renderTasks() {
+  if (hideinnher) {
+    hideinnher.innerHTML = ""; // Clear existing tasks
+    newTasks.forEach((task) => {
+      hideinnher.innerHTML += `
+        <div class="sectionBox animate__animated animate__fadeInLeft">
+          <div class="secDisply">
+            <div class="alarm">
+              <p>Time: <span id="alramSet">${task.time}</span></p>
+              <span> | </span>
+              <p>Date: <span id="dateSet">${task.date}</span></p>
+            </div>
+            <div class="reminderValue">
+              <p id="titles">${task.title}</p>
+              <p id="discerption">${task.description}</p>
+            </div>
+            <button onclick="editTask(${task.id})">Edit</button>
+            <button onclick="deleteTask(${task.id})">Delete</button>
+          </div>
+        </div>
+      `;
+    });
+  }
 }
