@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Reminder - SignUp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 animate__animated animate__zoomIn"
+    >
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2
+          class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+        >
+          Registration
+        </h2>
+      </div>
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div class="space-y-6">
+          <div>
+            <label
+              for="signUpUserName"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >User Name</label
+            >
+            <div class="mt-2">
+              <input
+                id="signUpUserName"
+                name="signUpUserName"
+                type="text"
+                autocomplete="signUp-User-Name"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for="signUpEmail"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >Email address</label
+            >
+            <div class="mt-2">
+              <input
+                id="signUpEmail"
+                name="signUpEmail"
+                type="email"
+                autocomplete="email"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <label
+                for="signUpPassword"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Password</label
+              >
+            </div>
+            <div class="mt-2">
+              <input
+                id="signUpPassword"
+                name="signUpPassword"
+                type="password"
+                autocomplete="current-password"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              id="signUpSubmit"
+              onclick="signup()"
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+        <p class="mt-10 text-center text-sm text-gray-500">
+          Already a member?
+          <a
+            href="./index.html"
+            class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >Login now.</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="registration.js"></script>
+  </body>
+</html>
